@@ -1,3 +1,17 @@
+# Text to MP3 Converter
+
+## Overview
+
+This project is a simple Text to MP3 converter built using Node.js, Express, and gTTS (Google Text-to-Speech). It allows users to input text and generate an MP3 file, which they can then download.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+
+- **Node.js** (version 14 or later)
+- **npm** (Node package manager)
+
+
 ## Getting Started
 
 Follow these steps to set up the development environment and run the server locally.
