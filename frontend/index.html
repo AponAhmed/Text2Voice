@@ -1,0 +1,53 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text2MP3 Generator</title>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white rounded-lg shadow-md w-full max-w-xl overflow-hidden">
+        <div class="h-24 px-6 py-4 bg-gradient-to-r from-sky-700 to-sky-900 relative">
+            <h2 class="text-xl text-white font-bold mb-4" id="apptitle">Generate MP3 from Text</h2>
+            <button type="button" id="show-list"
+                class="absolute right-6 top-5 p-1 bg-white hover:bg-opacity-25 bg-opacity-10 rounded-full">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 text-white" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M160 144h288M160 256h288M160 368h288" />
+                    <circle cx="80" cy="144" r="16" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="32" />
+                    <circle cx="80" cy="256" r="16" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="32" />
+                    <circle cx="80" cy="368" r="16" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="32" />
+                </svg>
+            </button>
+        </div>
+        <div id="generate" class="p-5 mx-6 bg-gray-100 bg-opacity-50 -translate-y-8 rounded backdrop-blur-md">
+            <textarea id="text-input" rows="10" class="border rounded-md text-gray-800 w-full p-2"
+                placeholder="Enter text here..."></textarea><br><br>
+
+            <div class="flex">
+                <button id="convert-button"
+                    class="px-5 flex bg-gradient-to-r from-sky-700 to-sky-900 text-white py-2 rounded-md hover:from-sky-800 hover:to-sky-600">Convert
+                    to MP3</button>
+                <div id="result" class="ml-4 flex "></div>
+            </div>
+            <div id="progress-container" class="hidden">
+                <div id="progress-bar" class="bg-blue-600 h-2" style="width: 0;"></div>
+            </div>
+
+        </div>
+        <div id="file-list" class="p-5 mx-6 bg-gray-100 bg-opacity-50 -translate-y-8 rounded backdrop-blur-md hidden">
+            <!-- File list will be appended here -->
+            <ul id="list-items" class="max-h-96 overflow-auto"></ul>
+        </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
